@@ -8,7 +8,7 @@ install MySQL server.
 ```
 sudo apt-get install mysql-server mysql-client
 ```
-next set-up a database for Fedora Commons [see](https://wiki.duraspace.org/display/FEDORA38/Installation+and+Configuration#InstallationandConfiguration-MySQL)
+next set-up a database for Fedora Commons [see Dura Space](https://wiki.duraspace.org/display/FEDORA38/Installation+and+Configuration#InstallationandConfiguration-MySQL)
 
 ### 1.2 Install Java.
 ### 1.3 Set environment variables.
