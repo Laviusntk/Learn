@@ -40,7 +40,7 @@ PATH="$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin"
 export JAVA_HOME CLASSPATH CATALINA_HOME JAVA_OPTS FEDORA_HOME PATH
 ```
 
-### 1.2 Install Fedora Commons
+### 1.4 Install Fedora Commons
 
 Download [Fedora-installer.3.8.1.jar](https://sourceforge.net/projects/fedora-commons/?source=typ_redirect), using the terminal direct to the diretory where the installer is downloaded and run the following command.
 
