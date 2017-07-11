@@ -1,7 +1,7 @@
 /*
 * This class is is used to keep track of user's details and session.
 */
-package learnapplication;
+package learnapplication.Utilities;
 
 /**
  *
