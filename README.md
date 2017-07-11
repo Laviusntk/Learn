@@ -6,11 +6,18 @@ More details on how to set-up fedora commons can be found on [Dura Space](https:
 
 install MySQL server.
 ```
-sudo apt-get install mysql-server mysql-client
+s$ udo apt-get install mysql-server mysql-client
 ```
 next set-up a database for Fedora Commons [see Dura Space](https://wiki.duraspace.org/display/FEDORA38/Installation+and+Configuration#InstallationandConfiguration-MySQL)
 
 ### 1.2 Install Java.
+Copy and pase the following commands to install Java.
+```
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt update; 
+$ sudo apt install oracle-java8-installer
+```
+
 ### 1.3 Set environment variables.
 ### 1.2 Install Fedora Commons
 
