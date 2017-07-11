@@ -27,7 +27,7 @@ Set up the JAVA_HOME, FEDORA_HOME, CATALINA_HOME, JAVA_OPTS and CLASSPATH. Run t
 $ gedit /etc/environment
 ```
 
-Copy and paste the following text at the end of the file. Make sure that the JAVA_HOME path matches the path of your Java home directory. Save and close the editor.
+Copy and paste the following text at the end of the file. Make sure that the JAVA_HOME path matches the path of your Java home directory. Save and close the editor. For detailed instructions see [Abhishek Singh's](http://asingh.com.np/blog/fedora-commons-installation-and-configuration-guide/) website.
 ```
 FEDORA_HOME=/opt/fedora
 JAVA_HOME=/opt/jdk1.<version>/   
@@ -41,6 +41,14 @@ export JAVA_HOME CLASSPATH CATALINA_HOME JAVA_OPTS FEDORA_HOME PATH
 ```
 
 ### 1.2 Install Fedora Commons
+
+Download [Fedora-installer.3.8.1.jar](https://sourceforge.net/projects/fedora-commons/?source=typ_redirect), using the terminal direct to the diretory where the installer is downloaded and run the following command.
+
+```
+$ java -jar fcrepo-installer-3.8.1.jar
+```
+
+Select custom install. For more [see](http://asingh.com.np/blog/fedora-commons-installation-and-configuration-guide/) website.
 
 
 ## 2. Learn Application
