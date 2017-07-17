@@ -10,6 +10,10 @@ Figure 1: Lecturer usecase
 
 Figure 1 shows the user interface needs of lecturers from the application. Lectures must be able to create a course folder/repository, add participants to the course for authorization purposes, upload/add resources to the course and browsing aswell as downloading resources. For lecturers to have access to the repository they must be logged in for authentication.
 
+![Alt text](student_usecase.png?raw=true "Learn Lecturer Usecase") 
+
+
+Figure 1 shows the user interface needs of lecturers from the application. Lectures must be able to create a course folder/repository, add participants to the course for authorization purposes, upload/add resources to the course and browsing aswell as downloading resources. For lecturers to have access to the repository they must be logged in for authentication.
 
 
 #### 1.2 Design alternatives
