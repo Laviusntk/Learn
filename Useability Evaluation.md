@@ -35,7 +35,7 @@ Figure 3 shows how Vula supports browsing and downloading. It uses a list view t
 
 ###### 1.2.1.2 Creating new Folder
 
-![Alt text](student_usecase.png?raw=true "Learn Lecturer Usecase") 
+![Alt text](vula_upload_create.png?raw=true "Learn Lecturer Usecase") 
 
 Figure 4: Vula file manager UI
 
