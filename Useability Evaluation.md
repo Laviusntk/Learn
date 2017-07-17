@@ -3,10 +3,13 @@
 This document describes the user evaluation of the Learn repository client application. Learn is an advanced repository built mainly for the dissemination of teaching material.
 ## 1. Usability Evaluation Goals.
 #### 1.1 User Interface requirements
-![Alt text](teacher_usecase.png?raw=true "Learn Lecturer Usecase")
+![Alt text](teacher_usecase.png?raw=true "Learn Lecturer Usecase") 
+
+Figure 1: Lecturer usecase
 
 
-The learn application must proivde users to the functionality to remotely deposit matrial into the repository, browse and download resources. 
+Figure 1 shows the user interface needs of the application for Lecturers. Lectures must be able to create a course folder/repository, add participants to the course for authorization purposes, upload/add resources to the course and browsing aswell as downloading resources. For lecturers to have access to the repository they must be logged in for authentication.
+
 
 
 #### 1.2 Design alternatives
