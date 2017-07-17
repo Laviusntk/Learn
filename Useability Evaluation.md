@@ -24,7 +24,7 @@ As a result, the following user interfaces must be provided: Browse, download,up
 In this section we look at the alternative designs from porpular plartforms and repositories. We selected Vula, Google dive and drop box as we have found these to be the most common amongest students and lecturers.
 
 ##### 1.2.1 Vula File Manager UI
-![Alt text](vula_file_browsing.png?raw=true "Learn Lecturer Usecase")
+![Alt text](vula_file_ browsing.png?raw=true "Learn Lecturer Usecase")
 
 Figure 3: Vula file manager UI
 
@@ -33,7 +33,7 @@ Figure 3 shows how Vula supports browsing and downloading. It uses a list view t
 
 
 ###### 1.2.1.2 Creating new Folder
-![Alt text](vula_upload_create.png?raw=true "Learn Lecturer Usecase")
+![Alt text](vula_file_ browsing.png?raw=true "Learn Lecturer Usecase")
 
 Figure 4: Vula file manager UI
 
