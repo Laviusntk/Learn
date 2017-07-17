@@ -25,7 +25,7 @@ In this section we look at the alternative designs from porpular plartforms and 
 
 ##### 1.2.1 Vula File Manager UI
 
-![Alt text](student_usecase.png?raw=true "Learn Lecturer Usecase") 
+![Alt text](vula_file_ browsing.png?raw=true "Learn Lecturer Usecase") 
 
 Figure 3: Vula file manager UI
 
