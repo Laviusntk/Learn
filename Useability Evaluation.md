@@ -21,13 +21,27 @@ Figure 2 shows the user interface needs of students from the application. Studen
 As a result, the following user interfaces must be provided: Browse, download,uploading resources to a course and adding a new course. 
 
 #### 1.2 Analysis Of Alternative Designs
-##### Vula File Manager UI
-![Alt text](vula_file_manager.png?raw=true "Learn Lecturer Usecase") 
-###### Adding new folder
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+In this section we look at the alternative designs from porpular plartforms and repositories. We selected Vula, Google dive and drop box as we have found these to be the most common amongest students and lecturers.
+
+##### 1.2.1 Vula File Manager UI
+![Alt text](vula_file_browsing.png?raw=true "Learn Lecturer Usecase")
+
+Figure 3: Vula file manager UI
+
+###### 1.2.1.1 File browsing and Download
+Figure 3 shows how Vula supports browsing and downloading. It uses a list view together with a dropdown folder structure. A closed folder is marked with a plus sign with an open folder marked left blank. Onclick of a closed folder, an indeneted list of files appear and the user can click on the file to download it. A list of super folders seperated with a forward slash is displayed above to indicate the folder the user is in and also for navigation purposes. 
 
 
-###### GOOGLE Drive Manager UI
+###### 1.2.1.2 Creating new Folder
+![Alt text](vula_upload_create.png?raw=true "Learn Lecturer Usecase")
+
+Figure 4: Vula file manager UI
+
+
+Figure 3 shows how Vula supports browsing and downloading. It uses a list view together with a dropdown folder structure. A closed folder is marked with a plus sign with an open folder marked left blank. Onclick of a closed folder, an indeneted list of files appear and the user can click on the file to download it. A list of super folders seperated with a forward slash is displayed above to indicate the folder the user is in and also for navigation purposes. 
+
+
+###### 1.2.2 GOOGLE Drive Manager UI
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 
