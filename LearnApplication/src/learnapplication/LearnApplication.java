@@ -4,9 +4,17 @@
  * and open the template in the editor.
  */
 package learnapplication;
-import learnapplication.Utilities.RESTClient;
+import com.google.gson.Gson;
+import static com.sun.javafx.css.SizeUnits.S;
+import learnapplication.Utilities.FedoraAPIService;
 import java.io.*;
 import java.net.*;
+import java.util.Scanner;
+import static javafx.scene.input.KeyCode.S;
+import static javax.swing.text.html.HTML.Tag.S;
+import learnapplication.models.User;
+import learnapplication.Utilities.VulaAPIServices;
+import sun.misc.BASE64Encoder;
 
 /**
  *
@@ -14,75 +22,34 @@ import java.net.*;
  */
 public class LearnApplication {
 
-    public void browse() throws Exception{
-    	String url = "http://localhost:8080/fedora/describe";
-
-	URL obj = new URL(url);
-	HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
-	conn.setReadTimeout(5000);
-	conn.addRequestProperty("Accept-Language", "en-US,en;q=0.8");
-	conn.addRequestProperty("User-Agent", "Mozilla");
-	conn.addRequestProperty("Referer", "google.com");
-
-	System.out.println("Request URL ... " + url);
-
-	boolean redirect = false;
-
-	// normally, 3xx is redirect
-	int status = conn.getResponseCode();
-	if (status != HttpURLConnection.HTTP_OK) {
-		if (status == HttpURLConnection.HTTP_MOVED_TEMP
-			|| status == HttpURLConnection.HTTP_MOVED_PERM
-				|| status == HttpURLConnection.HTTP_SEE_OTHER)
-		redirect = true;
-	}
-
-	System.out.println("Response Code ... " + status);
-        
-	if (redirect) {
-
-		// get redirect url from "location" header field
-		String newUrl = conn.getHeaderField("Location");
-
-		// get the cookie if need, for login
-		String cookies = conn.getHeaderField("Set-Cookie");
-
-		// open the new connnection again
-		conn = (HttpURLConnection) new URL(newUrl).openConnection();
-		conn.setRequestProperty("Cookie", cookies);
-		conn.addRequestProperty("Accept-Language", "en-US,en;q=0.8");
-		conn.addRequestProperty("User-Agent", "Mozilla");
-		conn.addRequestProperty("Referer", "google.com");
-
-		System.out.println("Redirect to URL : " + newUrl);
-	}
-
-	BufferedReader in = new BufferedReader(
-                              new InputStreamReader(conn.getInputStream()));
-	String inputLine;
-	StringBuffer html = new StringBuffer();
-
-	while ((inputLine = in.readLine()) != null) {
-		html.append(inputLine+"\n");
-	}
-	in.close();
-
-	System.out.println("URL Content... \n" + html.toString());
-	System.out.println("Done");        
-    }
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws Exception {
-        LearnApplication learn = new LearnApplication();
+        FedoraAPIService client = new FedoraAPIService();
         
-        RESTClient client = new RESTClient();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter file name: ");
+        File snd_file = new File(input.nextLine());
+        System.out.println("File exists : " +snd_file.exists());
+        System.out.println("File can be Read : " +snd_file.canRead());
+        System.out.println("File can be written : " +snd_file.canRead());
+        String file_name = snd_file.getName();
+        String mime = URLConnection.guessContentTypeFromName(file_name);
+
+
+        System.out.println("mimeType : "+mime);
+        String pid = client.createObject("candy","lovedare", "Lavius Nkateko Motileng");
+        System.out.println("PID : "+pid);
         
-        String REST_URL = "http://localhost:8080/fedora/describe"; 
-        String REPOSITORY_NAME = "learn";
-        String RESULT_PAGE = "describe";
+        String location = client.uploadFile(client.BASE_URL + "upload", snd_file);
+        System.out.println(location);
         
-        client.getRepositoryInfo(REST_URL, REPOSITORY_NAME, RESULT_PAGE);
+        client.createNewDataStream(pid, "newobject", mime, "uploading first version of the file",file_name, location);
+        
+        //client.gfindObjects("learn", "pid~learn:*");
+        
+//        Gson gson = new Gson();
+//        int[] ints = {1, 2, 3, 4, 5};
+//        String results = gson.toJson(new User()); 
+//        System.out.println(results);
+          //new VulaAPIServices();
     }
-    
 }
