@@ -29,7 +29,8 @@ public class GetUserDetails {
                     System.out.println("Got user :"+ user.toString());
                 }else {
                     int statusCode  = response.code();
-                    System.out.println("Error occured in retreving user details");            
+                    System.out.println("Error occured in retreving user details");
+                    System.out.println("Got the following response : " + statusCode);                    
                 }
             }
  

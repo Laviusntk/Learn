@@ -21,7 +21,7 @@ public class VulaApiUtils {
 
     public static VulaService getVulaService() {
         RetrofitClient client = new RetrofitClient("mtllav001", "3712lav123@@@NTKGeekSaw");
-        return client.getClient(API_BASE_URL).create(VulaService.class);
+        return client.getClient().create(VulaService.class);
     }
 
 }
