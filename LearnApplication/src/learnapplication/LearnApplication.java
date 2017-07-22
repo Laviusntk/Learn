@@ -6,14 +6,14 @@
 package learnapplication;
 import com.google.gson.Gson;
 import static com.sun.javafx.css.SizeUnits.S;
-import learnapplication.Utilities.FedoraAPIService;
+import learnapplication.services.FedoraAPIService;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 import static javafx.scene.input.KeyCode.S;
 import static javax.swing.text.html.HTML.Tag.S;
-import learnapplication.models.User;
-import learnapplication.Utilities.VulaAPIServices;
+import learnapplication.responses.User;
+import learnapplication.services.VulaAPIServices;
 import sun.misc.BASE64Encoder;
 
 /**

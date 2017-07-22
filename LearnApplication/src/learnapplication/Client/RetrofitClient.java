@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package learnapplication.services;
+package learnapplication.Client;
 
 import retrofit2.Retrofit;
 import retrofit2.GsonConverterFactory;

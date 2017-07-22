@@ -3,14 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package learnapplication.models;
+package learnapplication.responses;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 /**
  *
  * @author learnproject
  */
 public class DateTime {
+    @SerializedName("display")
+    @Expose    
     private String display;
+    
+    @SerializedName("time")
+    @Expose    
     private long time;
 
     public DateTime() {
