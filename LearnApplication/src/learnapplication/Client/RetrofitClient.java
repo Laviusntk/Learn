@@ -7,7 +7,8 @@ package learnapplication.Client;
 
 import retrofit2.Retrofit;
 import retrofit2.GsonConverterFactory;
- 
+import okhttp3.Credentials;
+
 public class RetrofitClient {
  
     private static Retrofit retrofit = null;

@@ -5,8 +5,10 @@
  */
 package learnapplication.services;
 import learnapplication.responses.User;
+import okhttp3.Credentials;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Query;
 /**
  *
@@ -15,4 +17,7 @@ import retrofit2.http.Query;
 public interface VulaService {
    @GET("user/current.json")
    Call<User> getUserProfile();
+   
+//   @POST(LOGIN)
+//   Call<ResponseBody> loginWithCredentials(@Body LoginCredentials data);   
 }
