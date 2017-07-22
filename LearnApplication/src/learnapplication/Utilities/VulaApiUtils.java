@@ -8,6 +8,7 @@ package learnapplication.Utilities;
 import learnapplication.Client.RetrofitClient;
 import learnapplication.services.VulaService;
 import okhttp3.Credentials;
+import okhttp3.OkHttpClient;
 import retrofit2.http.Headers;
 
 /**
@@ -15,12 +16,12 @@ import retrofit2.http.Headers;
  * @author learnproject
  */
 public class VulaApiUtils {
-    public static final String BASE_URL = "https://vula.uct.ac.za/direct/";
-    final String CR = "Authorization : " + Credentials.basic("mtllav001", "3712lav123@@@NTKGeekSaw");
-    
+
+    public static String API_BASE_URL = "https://vula.uct.ac.za/direct/";
+
     public static VulaService getVulaService() {
-        return RetrofitClient.getClient(BASE_URL).create(VulaService.class);
-    }    
-    
-    
+        RetrofitClient client = new RetrofitClient("mtllav001", "3712lav123@@@NTKGeekSaw");
+        return client.getClient(API_BASE_URL).create(VulaService.class);
+    }
+
 }

@@ -15,7 +15,7 @@ import retrofit2.http.Query;
  * @author learnproject
  */
 public interface VulaService {
-   @GET("user/current.json")
+   @GET("user/ae89c591-ca73-4f79-95a7-13b948ea2e94.json")
    Call<User> getUserProfile();
    
 //   @POST(LOGIN)
