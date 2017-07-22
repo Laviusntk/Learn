@@ -54,7 +54,7 @@ public class VulaAPIServices {
     private String sessionID;
     
     public VulaAPIServices() throws Exception{
-        System.out.println(authenticate("mtllav001","3712lav123@@@NTKGeekSaw", "http://localhost:8080/fedora/objects/cs101:8/datastreams/"));
+        System.out.println(authenticate("mtllav001","*************", "http://localhost:8080/fedora/objects/cs101:8/datastreams/"));
     }
       
   public boolean authenticate(String _username, String _password, String service_url) throws Exception{
