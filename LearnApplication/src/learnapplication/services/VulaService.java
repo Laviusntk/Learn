@@ -13,7 +13,6 @@ import retrofit2.http.Query;
  * @author learnproject
  */
 public interface VulaService {
-   @GET("/answers?order=desc&sort=activity&site=stackoverflow")
+   @GET("/user/current.json")
    Call<User> getUserProfile();
-    
 }
