@@ -12,6 +12,7 @@ import java.net.*;
 import java.util.Scanner;
 import static javafx.scene.input.KeyCode.S;
 import static javax.swing.text.html.HTML.Tag.S;
+import learnapplication.Client.ServiceGenerator;
 import learnapplication.Utilities.VulaApiUtils;
 import learnapplication.requests.GetUserDetails;
 import learnapplication.responses.User;
@@ -60,6 +61,7 @@ public class LearnApplication {
 //        System.out.println(results);
           //new VulaAPIServices();
           VulaService vservice = VulaApiUtils.getVulaService();
-          new GetUserDetails().getUser(vservice);
+          VulaService s = ServiceGenerator.createService(VulaService.class, "mtllav001", "3712lav123@@@NTKGeekSaw");
+          new GetUserDetails().getUser(s);
 }
 }
