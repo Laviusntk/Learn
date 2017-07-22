@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd" PID="learn:textstyle">
+    <foxml:objectProperties>
+        <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="A"/>                                       
+    </foxml:objectProperties>
+      <foxml:datastream CONTROL_GROUP="M" ID="DRAWING-BETTER" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion ID="DRAWING-BETTER.0" MIMETYPE="image/jpeg" LABEL="Architectural Drawing Pavilion III (med res)" CREATED="2004-12-10T00:21:58.000Z">
+      <!-- <foxml:contentLocation REF="http://icarus.lib.virginia.edu/images/iva/archerd05medium1.jpg" TYPE="URL"/> -->
+      <foxml:contentLocation REF="demo:999+DRAWING-BETTER+DRAWING-BETTER.0" TYPE="INTERNAL_ID"/>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+</foxml:digitalObject>

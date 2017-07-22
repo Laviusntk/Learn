@@ -1,0 +1,26 @@
+        String BASE_URL = "http://localhost:8080/fedora";
+        
+        FedoraCredentials fcr = new FedoraCredentials(BASE_URL,"fedoraAdmin","fedoraAdmin");
+        FedoraClient client = new FedoraClient(fcr);
+        File file = new File("dropbox.png");
+        String file_name = file.getName();
+        String mime = URLConnection.guessContentTypeFromName(file_name);
+        
+        System.out.println("File can read : "+ file.canRead());
+        System.out.println("File can write : "+ file.canWrite());
+        System.out.println("File esists : "+ file.exists());
+        Upload uploadmanager = client.upload(file);
+        UploadResponse upload_response = uploadmanager.execute(client);
+        
+        String location = upload_response.getUploadLocation();
+        System.out.println(location);
+        
+        AddDatastream datastream = client.addDatastream("learn:2","snob");
+       // datastream.content(file);
+        datastream.dsLabel("Lavius Image");
+        datastream.dsLocation(location);
+        datastream.mimeType(mime);
+        //datastream.execute(client);
+        
+        //WebResource wrs = client.resource("http://localhost:8080/fedora/objects/demo:25/datastreams/DSINPUTSPEC/content");
+        //System.out.println("Reteived webresource : "+client.describeRepository().toString());
