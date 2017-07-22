@@ -13,6 +13,6 @@ import retrofit2.http.Query;
  * @author learnproject
  */
 public interface VulaService {
-   @GET("/user/current.json")
+   @GET("user/current.json")
    Call<User> getUserProfile();
 }

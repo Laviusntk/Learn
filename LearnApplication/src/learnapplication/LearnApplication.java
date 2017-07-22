@@ -13,6 +13,7 @@ import java.util.Scanner;
 import static javafx.scene.input.KeyCode.S;
 import static javax.swing.text.html.HTML.Tag.S;
 import learnapplication.Utilities.VulaApiUtils;
+import learnapplication.requests.GetUserDetails;
 import learnapplication.responses.User;
 import learnapplication.services.VulaAPIServices;
 import learnapplication.services.VulaService;
@@ -26,7 +27,6 @@ import sun.misc.BASE64Encoder;
  * @author nkateko
  */
 public class LearnApplication {
-    private static VulaService vService;
     public static void main(String[] args) throws Exception {
 //        FedoraAPIService client = new FedoraAPIService();
 //        
@@ -57,26 +57,7 @@ public class LearnApplication {
 //        String results = gson.toJson(new User()); 
 //        System.out.println(results);
           //new VulaAPIServices();
-    vService = VulaApiUtils.getVulaService();
-//    vService.getUserProfile().enqueue(new Callback<User>() {
-//    @Override
-//    public void onResponse(Call<User> call, Response<User> response) {
-// 
-//        if(response.isSuccessful()) {
-//            String username = response.body().getDisplayName();
-//            System.out.println("Got name : "+username);
-//        }else {
-//            int statusCode  = response.code();
-//            System.out.println("Error occured");            
-//        }
-//    }
-// 
-//    @Override
-//    public void onFailure(Call<User> call, Throwable t) {
-//        System.out.println("error loading from API");
-//        }
-//    });      
-          
-          
+          VulaService vservice = VulaApiUtils.getVulaService();
+          new GetUserDetails().getUser(vservice);
 }
 }

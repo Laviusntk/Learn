@@ -13,7 +13,7 @@ import learnapplication.services.VulaService;
  * @author learnproject
  */
 public class VulaApiUtils {
-    public static final String BASE_URL = "https://vula.uct.ac.za/direct";
+    public static final String BASE_URL = "https://vula.uct.ac.za/direct/";
     
     public static VulaService getVulaService() {
         return RetrofitClient.getClient(BASE_URL).create(VulaService.class);
