@@ -20,13 +20,16 @@ public class GetUserDetails {
     
     private  User user = null;    
     private boolean done = false;   
-    public User getUser(VulaService service){
-        service.getUserProfile().enqueue(new Callback<User>() {
+    public User getUser(VulaService service, String auth_payload){
+        service.getUserProfile(auth_payload).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()) {
                     user = response.body();
-                    System.out.println("Got user :"+ user.toString());
+                    if(user == null)
+                        System.out.println("No user found");
+                    else
+                        System.out.println("Got user :"+ user.toString());
                 }else {
                     int statusCode  = response.code();
                     System.out.println("Error occured in retreving user details");

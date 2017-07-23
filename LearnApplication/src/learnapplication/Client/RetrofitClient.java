@@ -35,8 +35,8 @@ public class RetrofitClient {
                 Request request = original.newBuilder()
                         .header("User-Agent", "Learn")
                         .header("Accept", "application/json")
-                        .header("Authorization", "Basic "+(new BASE64Encoder()).encode(credentials.getBytes()) ) //Credentials.basic(username, password)
-                        //.addHeader("JESSIONID","f2d1d607-f34c-41c2-94d7-7fb174f7ed4d.vula5a")
+//                        .header("Authorization", "Basic "+(new BASE64Encoder()).encode(credentials.getBytes()) ) //Credentials.basic(username, password)
+                        .addHeader("Cookie","JSESSIONID=e2ddb6eb-91f4-4696-a916-7283dae585e1.vula7b; Path=/; HttpOnly")
                         //.method(original.method(), original.body())
                         .build();
 
