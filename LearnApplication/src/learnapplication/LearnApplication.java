@@ -4,26 +4,10 @@
  * and open the template in the editor.
  */
 package learnapplication;
-
-import com.google.gson.Gson;
-import static com.sun.javafx.css.SizeUnits.S;
-import learnapplication.services.FedoraAPIService;
-import java.io.*;
-import java.net.*;
 import java.util.*;
-import learnapplication.Client.ServiceGenerator;
-import learnapplication.Utilities.VulaApiUtils;
 import learnapplication.Utilities.VulaSessionUtils;
-import learnapplication.models.Credentials;
-import learnapplication.requests.GetUserDetails;
-import learnapplication.responses.User;
-import learnapplication.services.VulaAPIServices;
-import learnapplication.services.VulaService;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import sun.misc.BASE64Encoder;
-
+import com.google.gson.Gson;
 /**
  *
  * @author nkateko
