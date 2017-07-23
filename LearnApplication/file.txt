@@ -1,1 +1,42 @@
-hellow
+//    public static void main(String[] args) throws Exception {
+//        FedoraAPIService client = new FedoraAPIService();
+//        
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Please enter file name: ");
+//        File snd_file = new File(input.nextLine());
+//        System.out.println("File exists : " +snd_file.exists());
+//        System.out.println("File can be Read : " +snd_file.canRead());
+//        System.out.println("File can be written : " +snd_file.canRead());
+//        String file_name = snd_file.getName();
+//        String mime = URLConnection.guessContentTypeFromName(file_name);
+//
+//
+//        System.out.println("mimeType : "+mime);
+//        String pid = client.createObject("candy","lovedare", "Lavius Nkateko Motileng");
+//        System.out.println("PID : "+pid);
+//        
+//        String location = client.uploadFile(client.BASE_URL + "upload", snd_file);
+//        System.out.println(location);
+//        
+//        client.createNewDataStream(pid, "newobject", mime, "uploading first version of the file",file_name, location);
+    //client.gfindObjects("learn", "pid~learn:*");
+//        Gson gson = new Gson();
+//        int[] ints = {1, 2, 3, 4, 5};
+//        String results = gson.toJson(new User()); 
+//        System.out.println(results);
+    //new VulaAPIServices();
+//          VulaService vservice = VulaApiUtils.getVulaService();
+    //         VulaService s = ServiceGenerator.createService(VulaService.class, "mtllav001", "3712lav123@@@NTKGeekSaw");
+//          s.getUserProfile();
+//          new GetUserDetails().getUser(vservice,"");
+//
+//        String username = "mtllav001";
+//        String password = "3712lav123@@@NTKGeekSaw";
+//        
+//        Map<String, String> map =  new LinkedHashMap<String, String>();
+//        map.put("_username",username);
+//        map.put("_password",password);
+//        
+//        VulaService vservice = VulaApiUtils.getVulaService();
+//        new GetUserDetails().getUser(vservice, map);
+//    }

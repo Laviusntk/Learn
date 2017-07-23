@@ -5,7 +5,10 @@
  */
 package learnapplication.requests;
 
+import java.util.Map;
 import learnapplication.Utilities.VulaApiUtils;
+import learnapplication.models.Auth;
+import learnapplication.models.Credentials;
 import learnapplication.responses.User;
 import learnapplication.services.VulaService;
 import retrofit2.Call;
@@ -20,8 +23,8 @@ public class GetUserDetails {
     
     private  User user = null;    
     private boolean done = false;   
-    public User getUser(VulaService service, String auth_payload){
-        service.getUserProfile(auth_payload).enqueue(new Callback<User>() {
+    public User getUser(VulaService service, Map map){
+        service.getUserProfile(map).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()) {

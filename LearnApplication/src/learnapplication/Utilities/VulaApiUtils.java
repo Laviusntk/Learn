@@ -20,7 +20,7 @@ public class VulaApiUtils {
     public static String API_BASE_URL = "https://vula.uct.ac.za/direct/";
 
     public static VulaService getVulaService() {
-        RetrofitClient client = new RetrofitClient("mtllav001", "3712lav123@@@NTKGeekSaw");
+        RetrofitClient client = new RetrofitClient();
         return client.getClient().create(VulaService.class);
     }
 

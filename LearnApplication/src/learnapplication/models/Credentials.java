@@ -9,13 +9,13 @@ package learnapplication.models;
  *
  * @author learnproject
  */
-public class Auth {
-    private String _username;
-    private String _password;
+public class Credentials{
+    public String _username;
+    public String _password;
 
-    public Auth(String _username, String _password) {
-        this._username = _username;
-        this._password = _password;
+    public Credentials(String email, String password) {
+        this._username = email;
+        this._password = password;
     }
-       
+    
 }
