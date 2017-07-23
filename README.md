@@ -1,6 +1,6 @@
 # Learn
 ## Introduction 
-Learn is an instutional repository created mainly for the dissemination of teaching material. The Use cases for the repository can be found in the evalucation.md file, to give a summary, the repository must allow lecturers to upload teaching material, download, browse and share teahcing material other lecturers and students. This repo provides the code for the application that integrates Learn (built with Fedora commons) and the learning management system Vula at UCT. 
+Learn is an instutional repository created mainly for the dissemination of teaching material. The Use cases for the repository can be found in the evalucation.md file, to give a summary, the repository must allow lecturers to upload teaching material, download, browse and share teahcing material with other lecturers and students. This repo provides the code for the application that integrates Learn (built with Fedora commons) and the learning management system Vula at UCT. This application allows students to browse and download teaching material from within Vula and lecturers to push material to the repository. Bellow are steps to get you started with setting the plartform and how to use the code.
 
 ## 1. Setting Up Fedora Commons 3.8.1 Repository 
 More details on how to set-up fedora commons can be found on [Dura Space](https://wiki.duraspace.org/display/FEDORA38/Installation+and+Configuration) and [Abhishek Singh's](http://asingh.com.np/blog/fedora-commons-installation-and-configuration-guide/) website.
