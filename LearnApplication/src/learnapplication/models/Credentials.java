@@ -10,12 +10,21 @@ package learnapplication.models;
  * @author learnproject
  */
 public class Credentials{
-    public String _username;
-    public String _password;
+    private String _username;
+    private String _password;
 
     public Credentials(String email, String password) {
         this._username = email;
         this._password = password;
     }
+
+    public String getUsername() {
+        return _username;
+    }
+
+    public String getPassword() {
+        return _password;
+    }
+    
     
 }

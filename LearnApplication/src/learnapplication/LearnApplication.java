@@ -41,65 +41,65 @@ public class LearnApplication {
 
     public static void main(String[] args) throws Exception {
 
-        Map<String, String> map = new LinkedHashMap<>();
-        map.put(USERNAME_KEY, USERNAME_VALUE);
-        map.put(PASSWORD_KEY, PASSWORD_VALUE);
-
-        String LOGIN_REQUEST_URL = VULA_BASE_URL + "/session";
-
-        URL url = new URL(LOGIN_REQUEST_URL);
-
-        StringBuilder postData = new StringBuilder();
-        for (Map.Entry<String, String> param : map.entrySet()) {
-            if (postData.length() != 0) {
-                postData.append('&');
-            }
-            postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
-            postData.append('=');
-            postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
-        }
-
-        byte[] postDataBytes = postData.toString().getBytes("UTF-8");
-
-        System.out.println("Connecting to Sakai.....");
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
-        conn.setDoOutput(true);
-        conn.getOutputStream().write(postDataBytes);
-
-        Map<String, List<String>> response = conn.getHeaderFields();
-
-        System.out.println("Printing Response Header...\n");
-
-        System.out.println("+-----------------------------------------------------------+");
-        for (Map.Entry<String, List<String>> entry : response.entrySet()) {
-            System.out.println("| " + entry.getKey() + " \t : \t" + entry.getValue());
-            String tmp = entry.getKey() + "";
-            if (tmp.trim().equals("Set-Cookie")) {
-                COOKIE = entry.getValue().toString() + "";
-                COOKIE = COOKIE.replace("[", "").replace("]", "");
-            }
-        }
-        System.out.println("+-----------------------------------------------------------+");
-        System.out.println("Cookie : " + COOKIE);
-
-        // "Post data send ... waiting for reply");
-        int code = conn.getResponseCode(); // 200 = HTTP_OK
-        System.out.println("Response    (Code):" + code);
-        System.out.println("Response (Message):" + conn.getResponseMessage());
-
-        // read the response
-        DataInputStream input = new DataInputStream(conn.getInputStream());
-        int c;
-        StringBuilder resultBuf = new StringBuilder();
-        while ((c = input.read()) != -1) {
-            resultBuf.append((char) c);
-        }
-        input.close();
-        SESSION = resultBuf.toString();
-        System.out.println("SESSION Key: " + SESSION);
+//        Map<String, String> map = new LinkedHashMap<>();
+//        map.put(USERNAME_KEY, USERNAME_VALUE);
+//        map.put(PASSWORD_KEY, PASSWORD_VALUE);
+//
+//        String LOGIN_REQUEST_URL = VULA_BASE_URL + "/session";
+//
+//        URL url = new URL(LOGIN_REQUEST_URL);
+//
+//        StringBuilder postData = new StringBuilder();
+//        for (Map.Entry<String, String> param : map.entrySet()) {
+//            if (postData.length() != 0) {
+//                postData.append('&');
+//            }
+//            postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
+//            postData.append('=');
+//            postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+//        }
+//
+//        byte[] postDataBytes = postData.toString().getBytes("UTF-8");
+//
+//        System.out.println("Connecting to Sakai.....");
+//        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//        conn.setRequestMethod("POST");
+//        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+//        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+//        conn.setDoOutput(true);
+//        conn.getOutputStream().write(postDataBytes);
+//
+//        Map<String, List<String>> response = conn.getHeaderFields();
+//
+//        System.out.println("Printing Response Header...\n");
+//
+//        System.out.println("+-----------------------------------------------------------+");
+//        for (Map.Entry<String, List<String>> entry : response.entrySet()) {
+//            System.out.println("| " + entry.getKey() + " \t : \t" + entry.getValue());
+//            String tmp = entry.getKey() + "";
+//            if (tmp.trim().equals("Set-Cookie")) {
+//                COOKIE = entry.getValue().toString() + "";
+//                COOKIE = COOKIE.replace("[", "").replace("]", "");
+//            }
+//        }
+//        System.out.println("+-----------------------------------------------------------+");
+//        System.out.println("Cookie : " + COOKIE);
+//
+//        // "Post data send ... waiting for reply");
+//        int code = conn.getResponseCode(); // 200 = HTTP_OK
+//        System.out.println("Response    (Code):" + code);
+//        System.out.println("Response (Message):" + conn.getResponseMessage());
+//
+//        // read the response
+//        DataInputStream input = new DataInputStream(conn.getInputStream());
+//        int c;
+//        StringBuilder resultBuf = new StringBuilder();
+//        while ((c = input.read()) != -1) {
+//            resultBuf.append((char) c);
+//        }
+//        input.close();
+//        SESSION = resultBuf.toString();
+//        System.out.println("SESSION Key: " + SESSION);
         sendData();
 //        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 //        StringBuilder result = new StringBuilder();
@@ -122,8 +122,8 @@ public class LearnApplication {
         con.setInstanceFollowRedirects(true);
 
         //String postData = "my_data_for_posting";
-        con.setRequestProperty("Cookie", COOKIE);
-
+//        con.setRequestProperty("Cookie", COOKIE);
+        con.setRequestProperty("Cookie", "SignOnDefault=MTLLAV001; PS_DEVICEFEATURES=width:1366 height:768 pixelratio:1 touch:0 geolocation:1 websockets:1 webworkers:1 datepicker:0 dtpicker:0 timepicker:0 dnd:1 sessionstorage:1 localstorage:1 history:1 canvas:1 svg:1 postmessage:1 hc:0 maf:0; _ga=GA1.3.773602981.1500579399; JSESSIONID=e75f7fa3-6740-4627-8bed-68bc8e9fcd30.vula2b; pasystem_timezone_ok=true");
 //        con.setDoOutput(true);
         con.setDoInput(true);
 

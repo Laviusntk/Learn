@@ -5,6 +5,7 @@
  */
 package learnapplication.Utilities;
 
+import learnapplication.models.Credentials;
 import learnapplication.responses.User;
 
 /**
@@ -16,6 +17,8 @@ public abstract class SessionUtils {
     protected String SESSION_ID;
     protected String SESSION_SUB_URL;
     protected String BASE_URL;
+    protected Credentials credntials;
+    
     private static User user;
     
     public SessionUtils(String SESSION_SUB_URL, String BASE_URL) {
@@ -23,7 +26,8 @@ public abstract class SessionUtils {
         this.BASE_URL = BASE_URL;
     }
     
-    public abstract void create();
+    public abstract void create()throws Exception;
+    public abstract void create(String sessionID);
     public abstract String getSessionID();
 
     public static void setUser(User user) {
@@ -33,5 +37,16 @@ public abstract class SessionUtils {
     public static User getUser() {
         return user;
     }  
+
+    public void setCredntials(Credentials credntials) {
+        this.credntials = credntials;
+    }
+
+    public Credentials getCredntials() {
+        return credntials;
+    }
     
+    public String getSessionUrl(){
+        return BASE_URL + SESSION_SUB_URL;
+    }
 }
