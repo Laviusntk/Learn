@@ -16,12 +16,8 @@ import retrofit2.http.Headers;
  * @author learnproject
  */
 public class VulaApiUtils {
-
-    public static String API_BASE_URL = "https://vula.uct.ac.za/direct/";
-
-    public static VulaService getVulaService() {
-        RetrofitClient client = new RetrofitClient();
+    public static VulaService getVulaService(String SessionCookie) {
+        RetrofitClient client = new RetrofitClient(SessionCookie);
         return client.getClient().create(VulaService.class);
     }
-
 }

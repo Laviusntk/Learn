@@ -6,7 +6,6 @@
 package learnapplication.services;
 import java.util.Map;
 import static javafx.scene.AccessibleAttribute.HEADER;
-import learnapplication.models.Auth;
 import learnapplication.models.Credentials;
 import learnapplication.responses.User;
 import retrofit2.Call;

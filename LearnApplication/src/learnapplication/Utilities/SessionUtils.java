@@ -28,7 +28,6 @@ public abstract class SessionUtils {
     
     public abstract void create()throws Exception;
     public abstract void create(String sessionID);
-    public abstract String getSessionID();
 
     public static void setUser(User user) {
         SessionUtils.user = user;

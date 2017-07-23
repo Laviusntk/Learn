@@ -28,6 +28,7 @@ public class VulaSessionUtils extends SessionUtils {
 
     @Override
     public void create() throws Exception{
+        
         Map<String, String> map = new LinkedHashMap<>();
         map.put(USERNAME_KEY, super.credntials.getUsername());
         map.put(PASSWORD_KEY, super.credntials.getUsername());
@@ -79,11 +80,6 @@ public class VulaSessionUtils extends SessionUtils {
     @Override
     public void create(String _sessionID) {
         super.SESSION_ID = _sessionID;
-    }
-
-    @Override
-    public String getSessionID() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -7,7 +7,6 @@ package learnapplication.requests;
 
 import java.util.Map;
 import learnapplication.Utilities.VulaApiUtils;
-import learnapplication.models.Auth;
 import learnapplication.models.Credentials;
 import learnapplication.responses.User;
 import learnapplication.services.VulaService;
