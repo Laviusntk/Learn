@@ -26,7 +26,6 @@ public class LearnApplication {
         
         
         //VulaService vservice = VulaApiUtils.getVulaService("");
-        //VulaService s = ServiceGenerator.createService(VulaService.class, "mtllav001", "3712lav123@@@NTKGeekSaw");
         //s.getUserProfile();
         //new GetUserDetails().getUser(vservice," ");
     }
