@@ -1,108 +1,40 @@
 package learnapplication.responses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.Map;
 /**
  *
  * @author nkateko
  */
 public class User {
-    
-    @SerializedName("createdDate")
-    @Expose    
-    private long createdDate;
-    
-    @SerializedName("createdTime")
-    @Expose    
-    private DateTime createdTime;
-    
-    @SerializedName("displayId")
-    @Expose
+    private String createdDate;
+    private Map<String,String> createdTime;
     private String displayId;
-    
-    @SerializedName("displayName")
-    @Expose    
     private String displayName;
-  
-    @SerializedName("eid")
-    @Expose
     private String eid;
-    
-    @SerializedName("email")
-    @Expose
     private String email;
-    
-    @SerializedName("firstName")
-    @Expose
     private String firstName;
-    
-    @SerializedName("id")
-    @Expose
     private String id;
-    
-    @SerializedName("lastModified")
-    @Expose
     private String lastModified;
-  
-    @SerializedName("lastName")
-    @Expose
     private String lastName;
-    
-    @SerializedName("modifiedDate")
-    @Expose
     private String modifiedDate;
-    
-    @SerializedName("modifiedTime")
-    @Expose
-    private DateTime modifiedTime;
-    
-    @SerializedName("owner")
-    @Expose
+    private Map<String,String> modifiedTime;
     private String owner;
-    
-    @SerializedName("password")
-    @Expose
     private String password;
-    
-    @SerializedName("props")
-    @Expose
-    private String props;
-    
-    @SerializedName("reference")
-    @Expose
+    private Map<String, String> props;
     private String reference;
-    
-    @SerializedName("sortName")
-    @Expose
     private String sortName;
-    
-    @SerializedName("type")
-    @Expose
     private String type;
-    
-    @SerializedName("url")
-    @Expose
     private String url;
-    
-    @SerializedName("entityReference")
-    @Expose
     private String entityReference;
-    
-    @SerializedName("entityURL")
-    @Expose
     private String entityURL;
-    
-    @SerializedName("entityId")
-    @Expose
     private String entityId;
-    
-    @SerializedName("entityTitle")
-    @Expose
     private String entityTitle;
 
     public User() {
     }
 
-    public User(long createdDate, DateTime createdTime, String displayId, String displayName, String eid, String email, String firstName, String id, String lastModified, String lastName, String modifiedDate, DateTime modifiedTime, String owner, String password, String props, String reference, String sortName, String type, String url, String entityReference, String entityURL, String entityId, String entityTitle) {
+    public User(String createdDate, Map<String,String> createdTime, String displayId, String displayName, String eid, String email, String firstName, String id, String lastModified, String lastName, String modifiedDate, Map<String,String> modifiedTime, String owner, String password, Map<String, String> props, String reference, String sortName, String type, String url, String entityReference, String entityURL, String entityId, String entityTitle) {
         this.createdDate = createdDate;
         this.createdTime = createdTime;
         this.displayId = displayId;
@@ -128,11 +60,11 @@ public class User {
         this.entityTitle = entityTitle;
     }
 
-    public void setCreatedDate(long createdDate) {
+    public void setCreatedDate(String createdDate) {
         this.createdDate = createdDate;
     }
 
-    public void setCreatedTime(DateTime createdTime) {
+    public void setCreatedTime(Map<String,String> createdTime) {
         this.createdTime = createdTime;
     }
 
@@ -172,7 +104,7 @@ public class User {
         this.modifiedDate = modifiedDate;
     }
 
-    public void setModifiedTime(DateTime modifiedTime) {
+    public void setModifiedTime(Map<String,String> modifiedTime) {
         this.modifiedTime = modifiedTime;
     }
 
@@ -184,7 +116,7 @@ public class User {
         this.password = password;
     }
 
-    public void setProps(String props) {
+    public void setProps(Map<String, String> props) {
         this.props = props;
     }
 
@@ -220,11 +152,11 @@ public class User {
         this.entityTitle = entityTitle;
     }
 
-    public long getCreatedDate() {
+    public String getCreatedDate() {
         return createdDate;
     }
 
-    public DateTime getCreatedTime() {
+    public Map<String,String> getCreatedTime() {
         return createdTime;
     }
 
@@ -264,7 +196,7 @@ public class User {
         return modifiedDate;
     }
 
-    public DateTime getModifiedTime() {
+    public Map<String,String> getModifiedTime() {
         return modifiedTime;
     }
 
@@ -276,7 +208,7 @@ public class User {
         return password;
     }
 
-    public String getProps() {
+    public Map<String, String> getProps() {
         return props;
     }
 
@@ -316,6 +248,6 @@ public class User {
     public String toString() {
         return "User{" + "displayName=" + displayName + ", type=" + type + ", url=" + url + '}';
     }
-    
-    
+
+
 }

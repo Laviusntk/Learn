@@ -4,31 +4,36 @@
  * and open the template in the editor.
  */
 package learnapplication;
+
 import java.util.*;
 import learnapplication.Utilities.VulaSessionUtils;
 import sun.misc.BASE64Encoder;
 import com.google.gson.Gson;
+import learnapplication.Client.VulaClient;
+import learnapplication.responses.User;
+import learnapplication.services.VulaService;
+
 /**
  *
  * @author nkateko
  */
 public class LearnApplication {
-
+    private static final String VULA_BASE_URL = "https://vula.uct.ac.za/direct";
+    
     public static void main(String[] args) throws Exception {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter student number : ");
-        String usr = input.next();
-        System.out.print("Please enter Password : ");
-        String pwd = input.next();
+        String usr = "username";
+        String pwd = "password";
         
-        VulaSessionUtils session = new VulaSessionUtils(usr,pwd);
+        VulaClient client = new VulaClient(VULA_BASE_URL, usr, pwd);
+        client.authenticate("/session");
+        String json_user = client.request("/user/current.json", "","");
+        //System.out.println(json_user);
         
+        Gson gson = new Gson();
         
+        User user = gson.fromJson(json_user, User.class);
+        System.out.println(user.toString());
         
-        //VulaService vservice = VulaApiUtils.getVulaService("");
-        //s.getUserProfile();
-        //new GetUserDetails().getUser(vservice," ");
     }
 
-    
 }

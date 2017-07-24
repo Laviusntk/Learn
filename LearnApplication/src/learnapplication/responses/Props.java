@@ -5,24 +5,14 @@
  */
 package learnapplication.responses;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 /**
  *
  * @author learnproject
  */
 public class Props {
-    @SerializedName("spml_last_update")
-    @Expose
-    private String spml_last_update;
-    
-    @SerializedName("uctNewMailSent")
-    @Expose    
-    private String uctNewMailSent;
-    
-    @SerializedName("PS_MEMEBERSHIPS_SYNCHED")
-    @Expose    
+    private String spml_last_update;  
+    private String uctNewMailSent; 
     private String PS_MEMEBERSHIPS_SYNCHED;
 
     public Props() {

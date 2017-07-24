@@ -48,4 +48,18 @@ public abstract class SessionUtils {
     public String getSessionUrl(){
         return BASE_URL + SESSION_SUB_URL;
     }
+
+    public String getSESSION_ID() {
+        return SESSION_ID;
+    }
+
+    public String getSESSION_SUB_URL() {
+        return SESSION_SUB_URL;
+    }
+
+    public String getBASE_URL() {
+        return BASE_URL;
+    }
+    
+    
 }

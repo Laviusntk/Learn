@@ -12,36 +12,27 @@ import com.google.gson.annotations.SerializedName;
  *
  * @author learnproject
  */
-public class DateTime {
-    @SerializedName("display")
-    @Expose    
+public class DateTime {    
     private String display;
-    
-    @SerializedName("time")
-    @Expose    
-    private long time;
+    private String time;
 
     public DateTime() {
-    }
-
-    public DateTime(String display, long time) {
-        this.display = display;
-        this.time = time;
-    }
-
-    public void setDisplay(String display) {
-        this.display = display;
-    }
-
-    public void setTime(long time) {
-        this.time = time;
     }
 
     public String getDisplay() {
         return display;
     }
 
-    public long getTime() {
+    public String getTime() {
         return time;
     }
+
+    public void setDisplay(String display) {
+        this.display = display;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
 }

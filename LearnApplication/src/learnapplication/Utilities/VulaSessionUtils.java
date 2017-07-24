@@ -12,6 +12,7 @@ import java.net.URLEncoder;
 import java.util.*;
 import learnapplication.models.Credentials;
 import learnapplication.responses.User;
+import sun.misc.BASE64Encoder;
 
 /**
  * @author learnproject
@@ -31,8 +32,8 @@ public class VulaSessionUtils extends SessionUtils {
         
         Map<String, String> map = new LinkedHashMap<>();
         map.put(USERNAME_KEY, super.credntials.getUsername());
-        map.put(PASSWORD_KEY, super.credntials.getUsername());
-
+        map.put(PASSWORD_KEY, super.credntials.getPassword());
+        
         URL url = new URL(super.getSessionUrl());
 
         StringBuilder postData = new StringBuilder();
@@ -51,6 +52,7 @@ public class VulaSessionUtils extends SessionUtils {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Authorization", "Basic "+(new BASE64Encoder()).encode((super.credntials.getUsername()+":"+super.credntials.getPassword()).getBytes()));        
         conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
         conn.setDoOutput(true);
         conn.getOutputStream().write(postDataBytes);
@@ -69,17 +71,17 @@ public class VulaSessionUtils extends SessionUtils {
         int code = conn.getResponseCode(); // 200 = HTTP_OK
         System.out.println("Response    (Code):" + code);
         System.out.println("Response (Message):" + conn.getResponseMessage());
-        if(code != 200)
+        if(code != 200 && code != 201)
             throw new Exception("Failed to create session");
         else
-         System.out.println("+-----------------------------------------------------------+");
-         System.out.println("| Cookie : " + super.SESSION_ID);
-         System.out.println("+-----------------------------------------------------------+");           
+         System.out.println("+-------------------------------------------------------------------------------------------+");
+         System.out.println("| Cookie : " + super.SESSION_ID + " |");
+         System.out.println("+-------------------------------------------------------------------------------------------+");           
     }
 
     @Override
     public void create(String _sessionID) {
         super.SESSION_ID = _sessionID;
     }
-
+    
 }
