@@ -6,10 +6,11 @@
 package learnapplication;
 
 import java.util.*;
-import learnapplication.Utilities.VulaSessionUtils;
+import learnapplication.Utilities.VulaSession;
 import sun.misc.BASE64Encoder;
 import com.google.gson.Gson;
 import learnapplication.Client.VulaClient;
+import learnapplication.requests.VulaRequestHandler;
 import learnapplication.responses.User;
 import learnapplication.services.VulaService;
 
@@ -18,22 +19,20 @@ import learnapplication.services.VulaService;
  * @author nkateko
  */
 public class LearnApplication {
-    private static final String VULA_BASE_URL = "https://vula.uct.ac.za/direct";
+    private String usr;
+    private String pwd;
+    public  VulaSession vsession;
     
-    public static void main(String[] args) throws Exception {
-        String usr = "username";
-        String pwd = "password";
-        
-        VulaClient client = new VulaClient(VULA_BASE_URL, usr, pwd);
-        client.authenticate("/session");
-        String json_user = client.request("/user/current.json", "","");
-        //System.out.println(json_user);
-        
-        Gson gson = new Gson();
-        
-        User user = gson.fromJson(json_user, User.class);
-        System.out.println(user.toString());
-        
+    public LearnApplication(String _usr, String _pwd) throws Exception {
+        this.usr = _usr;
+        this.pwd = _pwd;
+        vsession = new VulaSession(usr,pwd);        
+    }
+       
+    public static void main(String[] args) throws Exception { 
+        LearnApplication learn = new LearnApplication("username","password");
+        User user = learn.vsession.request.getProfile();
+        System.out.println(user);
     }
 
 }
