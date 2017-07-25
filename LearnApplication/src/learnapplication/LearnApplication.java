@@ -35,7 +35,7 @@ public class LearnApplication {
     }
 
     public static void main(String[] args) throws Exception {
-        LearnApplication learn = new LearnApplication("mtllav001", "3712lav123@@@NTKGeekSaw");
+        LearnApplication learn = new LearnApplication("username", "password");
         User user = learn.vsession.request.getProfile();
         System.out.println(user);
         String objectResponse = learn.fsession.request.createObject("Big Data");
