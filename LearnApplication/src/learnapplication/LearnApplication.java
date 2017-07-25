@@ -9,30 +9,42 @@ import java.util.*;
 import learnapplication.Utilities.VulaSession;
 import sun.misc.BASE64Encoder;
 import com.google.gson.Gson;
+import java.io.File;
+import java.net.URL;
 import learnapplication.Client.VulaClient;
+import learnapplication.Utilities.FedoraSession;
 import learnapplication.requests.VulaRequestHandler;
 import learnapplication.responses.User;
-import learnapplication.services.VulaService;
 
 /**
  *
  * @author nkateko
  */
 public class LearnApplication {
+
     private String usr;
     private String pwd;
-    public  VulaSession vsession;
+    public VulaSession vsession;
+    public FedoraSession fsession;
     
     public LearnApplication(String _usr, String _pwd) throws Exception {
         this.usr = _usr;
         this.pwd = _pwd;
-        vsession = new VulaSession(usr,pwd);        
+        vsession = new VulaSession(usr, pwd);
+        fsession = new FedoraSession("fedoraAdmin", "fedoraAdmin", vsession.request.getProfile(), vsession.client);
     }
-       
-    public static void main(String[] args) throws Exception { 
-        LearnApplication learn = new LearnApplication("username","password");
+
+    public static void main(String[] args) throws Exception {
+        LearnApplication learn = new LearnApplication("mtllav001", "3712lav123@@@NTKGeekSaw");
         User user = learn.vsession.request.getProfile();
         System.out.println(user);
+        String objectResponse = learn.fsession.request.createObject("Big Data");
+        String pid = objectResponse;
+        System.out.println("PID : " + pid);
+        String location = "https://vula.uct.ac.za/access/content/group/021b5a33-2bb0-485f-b753-00754a2be47d/CSHonoursProjects2017v4.pdf"; 
+        String datastreamResponse = learn.fsession.request.createDataStream(pid, "solomon", "teting upload method", location);
+        String datastream = datastreamResponse;
+        System.out.println("Datastream : " + datastream);       
     }
 
 }

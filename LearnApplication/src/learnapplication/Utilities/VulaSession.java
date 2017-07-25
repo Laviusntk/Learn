@@ -20,7 +20,7 @@ import sun.misc.BASE64Encoder;
  * @author learnproject
  */
 public class VulaSession{
-    private VulaClient client;
+    public VulaClient client;
     public VulaRequestHandler request;
     private final String VULA_BASE_URL = "https://vula.uct.ac.za/direct";    
 

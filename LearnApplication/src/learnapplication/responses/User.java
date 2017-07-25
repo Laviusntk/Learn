@@ -246,7 +246,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "displayName=" + displayName + ", type=" + type + ", url=" + url + '}';
+        return "User{" + "createdDate=" + createdDate + ", createdTime=" + createdTime + ", displayId=" + displayId + ", displayName=" + displayName + ", eid=" + eid + ", email=" + email + ", firstName=" + firstName + ", id=" + id + ", lastModified=" + lastModified + ", lastName=" + lastName + ", modifiedDate=" + modifiedDate + ", modifiedTime=" + modifiedTime + ", owner=" + owner + ", password=" + password + ", props=" + props + ", reference=" + reference + ", sortName=" + sortName + ", type=" + type + ", url=" + url + ", entityReference=" + entityReference + ", entityURL=" + entityURL + ", entityId=" + entityId + ", entityTitle=" + entityTitle + '}';
     }
 
 
