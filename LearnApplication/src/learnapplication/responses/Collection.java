@@ -9,24 +9,19 @@ package learnapplication.responses;
  *
  * @author learnproject
  */
-public class Collection {
+public class Collection<T>{
     
     private String entityPrefix;
-    private String[] content_collection;
+    private T[] content_collection;
 
     public Collection() {
-    }
-
-    public Collection(String entityPrefix, String[] content_collection) {
-        this.entityPrefix = entityPrefix;
-        this.content_collection = content_collection;
-    }
+    }  
 
     public void setEntityPrefix(String entityPrefix) {
         this.entityPrefix = entityPrefix;
     }
 
-    public void setContent_collection(String[] content_collection) {
+    public void setContent_collection(T[] content_collection) {
         this.content_collection = content_collection;
     }
 
@@ -34,9 +29,17 @@ public class Collection {
         return entityPrefix;
     }
 
-    public String[] getContent_collection() {
+    public T[] getContent_collection() {
         return content_collection;
     }
 
+    @Override
+    public String toString() {
+        String resources =  "";
+        for(int i = 0; i < content_collection.length; i++)
+            resources += content_collection[i].toString() + ",\n";
+        return "Collection{\n" + "entityPrefix=" + entityPrefix + ",\n content_collection=" + resources + '}';
+    }
+    
     
 }

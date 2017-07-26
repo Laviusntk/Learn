@@ -7,16 +7,15 @@ package learnapplication.requests;
 
 import com.google.gson.Gson;
 import learnapplication.Client.VulaClient;
+import learnapplication.responses.Collection;
+import learnapplication.responses.Resource;
 import learnapplication.responses.User;
 
 /**
  *
  * @author learnproject
  */
-public class VulaRequestHandler {
-    private final String SESSION_PATH = "/session";
-    private final String PROFILE_PATH = "/user/current.json";
-    
+public class VulaRequestHandler {    
     private Gson gson;
     private VulaClient client;
     
@@ -26,8 +25,12 @@ public class VulaRequestHandler {
     }
         
     public final User getProfile() throws Exception{
-        String json_user = this.client.request(this.PROFILE_PATH, "","");
+        String json_user = this.client.request("/user/current.json", "","");
         return gson.fromJson(json_user, User.class); 
     }
     
+    public final Collection<Resource> getResources() throws Exception{
+        String json_resources = this.client.request("/content/site/021b5a33-2bb0-485f-b753-00754a2be47d.json", "", "");
+        return gson.fromJson(json_resources, Collection.class);
+    }
 }
