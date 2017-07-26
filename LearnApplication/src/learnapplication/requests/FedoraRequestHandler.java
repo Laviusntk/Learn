@@ -20,12 +20,13 @@ import static learnapplication.services.FedoraAPIService.upload;
  * @author learnproject
  */
 public class FedoraRequestHandler {
+
     private final String NEW_OBJECT_PATH = "/objects/new";
     private final String DATASTREAM_PATH = "/objects";
     private final String FLASH_VALUE = "false";
     private FedoraClient client;
     private User user;
-    
+
     public FedoraRequestHandler(FedoraClient _client, User _user) {
         this.client = _client;
         this.user = _user;
@@ -37,28 +38,34 @@ public class FedoraRequestHandler {
                 "?flash=false"
                 + "&label=" + URLEncoder.encode(_label, "UTF-8")
                 + "&namespace=" + URLEncoder.encode(user.getDisplayId(), "UTF-8")
-                + "&ownerId=" + URLEncoder.encode(user.getDisplayName(), "UTF-8"),"");
+                + "&ownerId=" + URLEncoder.encode(user.getDisplayName(), "UTF-8"), "POST");
     }
-    
-  public String createDataStream(String _pid, String _dsid,  String _logmsg, String fileUrl) throws Exception{
-        File snd_file = new File(fileUrl);  
+
+    public String createDataStream(String _pid, String _dsid, String _logmsg, String fileUrl) throws Exception {
+        File snd_file = new File(fileUrl);
         return this.client.request(
-                  DATASTREAM_PATH + "/",
-                  _pid
-                  +"/datastreams/"
-                  + _dsid+"?"
-                  + "mimeType=" +URLConnection.guessContentTypeFromName(snd_file.getName())
-                  + "&dsLabel=" +URLEncoder.encode(snd_file.getName(), "UTF-8")
-                  + "&ignoreContent=false"
-                  + "&versionable=true"
-                  + "&controlGroup=M"                          
-                  + "&logMessage=" + URLEncoder.encode(_logmsg, "UTF-8"),
-                  snd_file,
-                  fileUrl
-                  );
-  }
-  
-  /*
+                DATASTREAM_PATH + "/",
+                _pid
+                + "/datastreams/"
+                + _dsid + "?"
+                + "mimeType=" + URLConnection.guessContentTypeFromName(snd_file.getName())
+                + "&dsLabel=" + URLEncoder.encode(snd_file.getName(), "UTF-8")
+                + "&ignoreContent=false"
+                + "&versionable=true"
+                + "&controlGroup=M"
+                + "&logMessage=" + URLEncoder.encode(_logmsg, "UTF-8"),
+                snd_file,
+                fileUrl
+        );
+    }
+
+    public String browseObjects(String _searchTerm, String _query)
+            throws Exception {
+        String url = "objects/?pid=true&ownerId=true&title=true&terms=*"+URLEncoder.encode(_searchTerm, "UTF-8")+"*&query="+URLEncoder.encode(_query, "UTF-8")+"&maxResults=20";
+        return this.client.request("/",url, "GET");
+    }
+    //                                      + "&terms=*" +_searchTerm+"*"
+    /*
       public String createDataStream(String _pid, String _dsid, String _logmsg, File snd_file) throws Exception {
         return this.client.request(
                 DATASTREAM_PATH + "/",
@@ -76,5 +83,5 @@ public class FedoraRequestHandler {
                 snd_file
         );
     }
-  */
+     */
 }

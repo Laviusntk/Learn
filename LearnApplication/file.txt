@@ -26,7 +26,7 @@
 //        System.out.println(results);
     //new VulaAPIServices();
 //          VulaService vservice = VulaApiUtils.getVulaService();
-    //         VulaService s = ServiceGenerator.createService(VulaService.class, "mtllav001", "3712lav123@@@NTKGeekSaw");
+    //         VulaService s = ServiceGenerator.createService(VulaService.class, "", "");
 //          s.getUserProfile();
 //          new GetUserDetails().getUser(vservice,"");
 //

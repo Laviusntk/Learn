@@ -35,16 +35,20 @@ public class LearnApplication {
     }
 
     public static void main(String[] args) throws Exception {
-        LearnApplication learn = new LearnApplication("username", "password");
+        LearnApplication learn = new LearnApplication("mtllav001", "3712lav123@@@NTKGeekSaw");
         User user = learn.vsession.request.getProfile();
-        System.out.println(user);
+        //System.out.println(user);
         String objectResponse = learn.fsession.request.createObject("Big Data");
         String pid = objectResponse;
         System.out.println("PID : " + pid);
+        
         String location = "https://vula.uct.ac.za/access/content/group/021b5a33-2bb0-485f-b753-00754a2be47d/CSHonoursProjects2017v4.pdf"; 
-        String datastreamResponse = learn.fsession.request.createDataStream(pid, "solomon", "teting upload method", location);
+        String datastreamResponse = learn.fsession.request.createDataStream(pid, user.getLastName(), "teting upload method", location);
         String datastream = datastreamResponse;
-        System.out.println("Datastream : " + datastream);       
+        System.out.println("Datastream : " + datastream);
+        
+        //String results = learn.fsession.request.browseObjects("Big Data","pid~"+pid+":*");
+        //System.out.println(results);
     }
 
 }

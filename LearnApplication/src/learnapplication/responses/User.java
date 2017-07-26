@@ -246,7 +246,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "createdDate=" + createdDate + ", createdTime=" + createdTime + ", displayId=" + displayId + ", displayName=" + displayName + ", eid=" + eid + ", email=" + email + ", firstName=" + firstName + ", id=" + id + ", lastModified=" + lastModified + ", lastName=" + lastName + ", modifiedDate=" + modifiedDate + ", modifiedTime=" + modifiedTime + ", owner=" + owner + ", password=" + password + ", props=" + props + ", reference=" + reference + ", sortName=" + sortName + ", type=" + type + ", url=" + url + ", entityReference=" + entityReference + ", entityURL=" + entityURL + ", entityId=" + entityId + ", entityTitle=" + entityTitle + '}';
+        return "User{" + "createdDate=" + createdDate + ",\n createdTime=" + createdTime + ",\n displayId=" + displayId + ",\n displayName=" + displayName + ",\n eid=" + eid + ",\n email=" + email + ",\n firstName=" + firstName + ",\n id=" + id + ",\n lastModified=" + lastModified + ",\n lastName=" + lastName + ",\n modifiedDate=" + modifiedDate + ",\n modifiedTime=" + modifiedTime + ",\n owner=" + owner + ",\n password=" + password + ",\n props=" + props + ",\n reference=" + reference + ",\n sortName=" + sortName + ",\n type=" + type + ",\n url=" + url + ",\n entityReference=" + entityReference + ",\n entityURL=" + entityURL + ",\n entityId=" + entityId + ",\n entityTitle=" + entityTitle + '}';
     }
 
 

@@ -40,7 +40,7 @@ public class FedoraClient extends Client {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoInput(true);
             connection.setDoOutput(true);
-            connection.setRequestMethod("POST");
+            connection.setRequestMethod(method);
             connection.setRequestProperty("User-Agent", "CodeJava Agent");
             connection.setRequestProperty("Authorization", super.credentials);
             connection.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
