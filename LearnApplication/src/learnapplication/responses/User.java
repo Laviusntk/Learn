@@ -1,6 +1,7 @@
 package learnapplication.responses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
 import java.util.Map;
 /**
  *
@@ -31,6 +32,8 @@ public class User {
     private String entityId;
     private String entityTitle;
 
+    public ArrayList<Site> sites;
+    
     public User() {
     }
 

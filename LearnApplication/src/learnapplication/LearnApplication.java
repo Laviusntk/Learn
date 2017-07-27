@@ -11,10 +11,14 @@ import sun.misc.BASE64Encoder;
 import com.google.gson.Gson;
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import learnapplication.Client.VulaClient;
 import learnapplication.Utilities.FedoraSession;
 import learnapplication.requests.VulaRequestHandler;
-import learnapplication.responses.Collection;
+import learnapplication.responses.Resource;
+import learnapplication.responses.ResourceCollection;
+import learnapplication.responses.Site;
+import learnapplication.responses.SiteCollection;
 import learnapplication.responses.User;
 
 /**
@@ -27,32 +31,56 @@ public class LearnApplication {
     private String pwd;
     public VulaSession vsession;
     public FedoraSession fsession;
-    
+    public User user;
+
     public LearnApplication(String _usr, String _pwd) throws Exception {
         this.usr = _usr;
         this.pwd = _pwd;
-        vsession = new VulaSession(usr, pwd);
-        fsession = new FedoraSession("fedoraAdmin", "fedoraAdmin", vsession.request.getProfile(), vsession.client);
+        this.vsession = new VulaSession(usr, pwd);
+        this.fsession = new FedoraSession("fedoraAdmin", "fedoraAdmin", vsession.request.getProfile(), vsession.client);
+        this.user = vsession.request.getProfile();
+        SiteCollection sites = this.vsession.request.getSites();
+
+        ArrayList<Site> my_sites = new ArrayList<>();
+
+        for (int i = 0; i < sites.getSite_collection().length; i++) {
+            Site site = sites.getSite_collection()[i];
+            ResourceCollection content = this.vsession.request.getResources(site.getId());
+            site.mycontent = content.getResourceByID(this.user.getId());
+            my_sites.add(site);
+        }
+        
+        this.user.sites = my_sites;
     }
 
+    
+    public String ingest(String ObjectName, String fileURL, String logMSG){
+        try{
+            String objectResponse = this.fsession.request.createObject(ObjectName);
+            String pid = objectResponse; 
+            String datastreamResponse = this.fsession.request.createDataStream(pid, this.user.getLastName(), logMSG, fileURL);
+            String datastream = datastreamResponse;
+            if(datastream.trim().equals("201"))
+                return "Object " + ObjectName +" created successfully";
+            else
+                return "Error uploading file";
+        }catch(Exception e){
+            return "Error uploading file";
+        }
+    
+    }
+    
+    public String browse(String SearchTerm, String query){
+        try{
+            return this.fsession.request.browseObjects(SearchTerm,query);
+            //"pid~"+pid+":*"
+        }catch(Exception e){
+            return "Error retreiving objects";
+        }
+    }
     public static void main(String[] args) throws Exception {
-        LearnApplication learn = new LearnApplication("mtllav001", "3712lav123@@@NTKGeekSaw");
-        User user = learn.vsession.request.getProfile();
-        Collection collection = learn.vsession.request.getResources();
-        System.out.println(collection);
-        
-        //System.out.println(user);
-//        String objectResponse = learn.fsession.request.createObject("Big Data");
-//        String pid = objectResponse;
-//        System.out.println("PID : " + pid);
-//        
-//        String location = "https://vula.uct.ac.za/access/content/group/021b5a33-2bb0-485f-b753-00754a2be47d/CSHonoursProjects2017v4.pdf"; 
-//        String datastreamResponse = learn.fsession.request.createDataStream(pid, user.getLastName(), "teting upload method", location);
-//        String datastream = datastreamResponse;
-//        System.out.println("Datastream : " + datastream);
-        
-        //String results = learn.fsession.request.browseObjects("Big Data","pid~"+pid+":*");
-        //System.out.println(results);
+        LearnApplication learn = new LearnApplication("username", "password");
+
     }
 
 }

@@ -7,8 +7,10 @@ package learnapplication.requests;
 
 import com.google.gson.Gson;
 import learnapplication.Client.VulaClient;
-import learnapplication.responses.Collection;
+import learnapplication.responses.ResourceCollection;
 import learnapplication.responses.Resource;
+import learnapplication.responses.Site;
+import learnapplication.responses.SiteCollection;
 import learnapplication.responses.User;
 
 /**
@@ -29,8 +31,15 @@ public class VulaRequestHandler {
         return gson.fromJson(json_user, User.class); 
     }
     
-    public final Collection<Resource> getResources() throws Exception{
-        String json_resources = this.client.request("/content/site/021b5a33-2bb0-485f-b753-00754a2be47d.json", "", "");
-        return gson.fromJson(json_resources, Collection.class);
+    public final ResourceCollection getResources(String siteID) throws Exception{
+        String json_resources = this.client.request("/content/site/"+siteID+".json", "", "");
+        return gson.fromJson(json_resources, ResourceCollection.class);
     }
+    
+    public final SiteCollection getSites() throws Exception{
+        String json_sites = this.client.request("/site.json", "", "");
+        return gson.fromJson(json_sites, SiteCollection.class);
+    }
+
+    
 }
