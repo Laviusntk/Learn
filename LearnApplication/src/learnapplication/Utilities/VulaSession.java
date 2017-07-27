@@ -11,7 +11,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.*;
 import learnapplication.Client.VulaClient;
-import learnapplication.models.Credentials;
 import learnapplication.requests.VulaRequestHandler;
 import learnapplication.responses.User;
 import sun.misc.BASE64Encoder;

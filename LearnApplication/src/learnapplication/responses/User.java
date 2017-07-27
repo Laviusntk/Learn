@@ -31,7 +31,6 @@ public class User {
     private String entityURL;
     private String entityId;
     private String entityTitle;
-
     public ArrayList<Site> sites;
     
     public User() {
