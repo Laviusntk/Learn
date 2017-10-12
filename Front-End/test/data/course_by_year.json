@@ -1,0 +1,77 @@
+{
+  "folder_collection":[
+  {
+    "name":"Exams",
+    "folders":[
+      {
+        "title":"Final Exam.pdf",
+        "author":"md@cs.uct.ac.za",
+        "icon":"insert_drive_file", "class":"-",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/poster3.pdf"
+      }
+    ]
+  },
+  {
+    "name":"Assignments",
+    "folders":[
+      {
+        "title":"Assignment 1.text",
+        "author":"md@cs.uct.ac.za",
+        "icon":"insert_drive_file", "class":"-",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/poster3.pdf"
+      },
+      {
+        "title":"Assignment 2.text",
+        "author":"md@cs.uct.ac.za",
+        "icon":"insert_drive_file", "class":"-",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/poster3.pdf"
+      },
+      {
+        "title":"Assignment 3.pdf",
+        "author":"md@cs.uct.ac.za",
+        "icon":"insert_drive_file", "class":"-",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/poster3.pdf"
+      }
+    ]
+  },
+  {
+    "name":"Miscellaneous Course Resources",
+    "folders":[
+      {
+        "title":"Project Poster.pdf",
+        "year":"2016",
+        "author":"laviusmotileng@gmail.com",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/poster3.pdf",
+        "icon":"insert_drive_file", "class":"-"
+      },
+      {
+        "title":"video1.mp4",
+        "year":"2015",
+        "author":"md@cs.uct.ac.za",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/video1.mp4",
+        "icon":"insert_drive_file", "class":"-"
+      },
+      {
+        "title":"video2.mp4",
+        "year":"2015",
+        "author":"md@cs.uct.ac.za",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/video2.mp4",
+        "icon":"insert_drive_file", "class":"-"
+      },
+      {
+        "title":"Poster 2.pdf",
+        "year":"2016",
+        "author":"laviusmotileng@gmail.com",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/drawing.pdf",
+        "icon":"insert_drive_file", "class":"-"
+      },
+      {
+        "title":"video1.mp4",
+        "year":"2015",
+        "author":"md@cs.uct.ac.za",
+        "url":"https://projectntk.000webhostapp.com/learn/test/files/video1.mp4",
+        "icon":"insert_drive_file", "class":"-"
+      }    ]
+  }
+]
+  }

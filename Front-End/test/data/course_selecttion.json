@@ -1,0 +1,256 @@
+{
+  "folder_collection":[
+  {
+    "name":"HCI",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"DSC",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"LAI",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"NIS",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"MATHS",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"ICT4D",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  },
+  {
+    "name":"PCU",
+    "folders":[
+      {
+        "title":"2017",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2016",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2015",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2014",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2013",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      },
+      {
+        "title":"2012",
+        "author":"md@cs.uct.ac.za",
+        "icon":"folder", "url":"#", "class":"courseYear"
+      }
+    ],
+    "sub_folders":[]
+  }
+]
+}

@@ -1,0 +1,70 @@
+<html>
+	<head>
+			<title>Learn</title>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" type="text/css">
+			<link  rel="stylesheet" type="text/css" href="./css/normalize.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+		<link  rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+
+<div id="MainView">
+	<ul id="HeaderView">
+		<li class="toolbar" >
+			<a href="#" class="button blue">Synchronize</a>
+			<a href="#" class="button default">Dowbload Course</a>
+			<a href="#" class="button red">Logout</a>
+		</li>
+		<li class="pathHolder">
+			<a class="path 1" name="home">Home</a>
+			<a class="path home" name="home"> / </a>
+			<a  class="path course" name="course" > Courses</a>
+			<a class="path course" name="home"> / </a>
+			<a  class="path year" name="year"> 2016</a>
+		</li>
+	</ul>
+	<ul id="FolderView"></ul>
+	<div id="loginForm"></div>
+</div>
+
+<!-- <div id="signInButton">
+<span class="g-signin"
+	data-scope="openid email"
+	data-clientid="625446479040-sc814kvcpuhr369qr58h9llb37m1u5ll.apps.googleusercontent.com"
+	data-redirecturi="postmessage"
+	data-accesstype="offline"
+	data-cookiepolicy="single_host_origin"
+	data-callback="signInCallback"
+	data-approvalprompt="force">
+</span>
+</div> -->
+
+<div id="result"></div>
+
+<!-- <script>
+function signInCallback(authResult) {
+	if (authResult['code']) {
+		$('#signInButton').hide();
+		$.ajax({ url: 'https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'],
+			headers: {
+				'Access-Control-Allow-Origin': 'https://projectntk.000webhostapp.com',
+				'Data': authResult['code'],
+				'X-Requested-With': 'XMLHttpRequest'
+			 }
+		})
+		.done(function(data){
+			alert(JSON.stringify(data));
+		})
+		.fail(function(){
+			alert("Request Failed");
+		});
+	}
+}
+</script> -->
+<script src="./js/Service.js"></script>
+<script src="./js/testData.js"></script>
+<script src="./js/script.js"></script>
+	</body>
+</html>

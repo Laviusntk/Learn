@@ -1,0 +1,232 @@
+/* BASE BUTTONS */
+input .cb {
+    background-color:red;
+}
+.gbutton {
+		display: inline-block;
+		background-color: #f5f5f5;
+		background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+		background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+		background-image: -ms-linear-gradient(top, #f5f5f5, #f1f1f1);
+		background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+		background-image: linear-gradient(top, #f5f5f5, #f1f1f1);
+		color: #444;
+		border: 1px solid #dcdcdc;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		cursor: default;
+		font-size: 11px;
+		font-weight: 400;
+		height: 30px;
+		min-width: 54px;
+		padding: 0 20px;
+		margin: 5px;
+}
+
+.gbutton:hover {
+		background-color: #F8F8F8;
+		background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+		background-image: -moz-linear-gradient(top, #f8f8f8, #f1f1f1);
+		background-image: -ms-linear-gradient(top, #f8f8f8, #f1f1f1);
+		background-image: -o-linear-gradient(top, #f8f8f8, #f1f1f1);
+		background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+		border: 1px solid #C6C6C6;
+		color: #333;
+		-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+		-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+}
+/* blue */
+
+.gbutton.blue {
+		background-color: #4D90FE;
+		background-image: -webkit-linear-gradient(top, #4d90fe, #18B8EC);
+		background-image: -moz-linear-gradient(top, #4d90fe, #18B8EC);
+		background-image: -ms-linear-gradient(top, #4d90fe, #18B8EC);
+		background-image: -o-linear-gradient(top, #4d90fe, #18B8EC);
+		background-image: linear-gradient(top, #4d90fe, #18B8EC);
+		border: 1px solid #3079ED;
+		color: white;
+}
+
+.gbutton.blue:hover {
+		border: 1px solid #2F5BB7;
+		background-color: #357AE8;
+		background-image: -webkit-linear-gradient(top, #4d90fe, #357ae8);
+		background-image: -moz-linear-gradient(top, #4d90fe, #357ae8);
+		background-image: -ms-linear-gradient(top, #4d90fe, #357ae8);
+		background-image: -o-linear-gradient(top, #4d90fe, #357ae8);
+		background-image: linear-gradient(top, #4d90fe, #357ae8);
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+		-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+/* red */
+
+.gbutton.red {
+		background-color: #D14836;
+		background-image: -webkit-linear-gradient(top, #dd4b39, #f63232);
+		background-image: -moz-linear-gradient(top, #dd4b39, #f63232);
+		background-image: -ms-linear-gradient(top, #dd4b39, #f63232);
+		background-image: -o-linear-gradient(top, #dd4b39, #f63232);
+		background-image: linear-gradient(top, #dd4b39, #f63232);
+		border: 1px solid transparent;
+		color: white;
+		text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.gbutton.red:hover {
+		background-color: #C53727;
+		background-image: -webkit-linear-gradient(top, #dd4b39, #c53727);
+		background-image: -moz-linear-gradient(top, #dd4b39, #c53727);
+		background-image: -ms-linear-gradient(top, #dd4b39, #c53727);
+		background-image: -o-linear-gradient(top, #dd4b39, #c53727);
+		background-image: linear-gradient(top, #dd4b39, #c53727);
+}
+/* green */
+
+.gbutton.green {
+		background-color: #3D9400;
+		background-image: -webkit-linear-gradient(top, #3d9400, #398a00);
+		background-image: -moz-linear-gradient(top, #3d9400, #398a00);
+		background-image: -ms-linear-gradient(top, #3d9400, #398a00);
+		background-image: -o-linear-gradient(top, #3d9400, #398a00);
+		background-image: linear-gradient(top, #3d9400, #398a00);
+		border: 1px solid #29691D;
+		color: white;
+		text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.gbutton.green:hover {
+		background-color: #368200;
+		background-image: -webkit-linear-gradient(top, #3d9400, #368200);
+		background-image: -moz-linear-gradient(top, #3d9400, #368200);
+		background-image: -ms-linear-gradient(top, #3d9400, #368200);
+		background-image: -o-linear-gradient(top, #3d9400, #368200);
+		background-image: linear-gradient(top, #3d9400, #368200);
+		border: 1px solid #2D6200;
+		text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.gbutton.default:active {
+		-webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+		-moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+		box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+		color: black;
+}
+
+.gbutton.blue:active,
+.gbutton.red:active,
+.gbutton.green:active {
+		-webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .3);
+		-moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .3);
+		box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .3);
+}
+/* GOOGLE SOCIAL BUTTONS */
+
+.google-social-button {
+		min-width: 54px;
+		background: #fff;
+		border: 1px solid hsla(0, 0%, 0%, .15);
+		border-radius: 2px;
+		box-shadow: 0 1px 0 hsla(0, 0%, 0%, .05);
+		outline: none;
+		font-size: 11px;
+		font-weight: bold;
+		line-height: 28px;
+		padding: 0 8px;
+		color: #404040;
+}
+
+.google-social-button:hover {
+		border: 1px solid #b8b8b8;
+		box-shadow: 0 1px 0 hsla(0, 0%, 0%, .1);
+		outline: none;
+}
+
+.google-social-button:active {
+		color: #262626;
+		background: #e5e5e5;
+		border: 1px solid #d9d9d9;
+		box-shadow: inset 0 2px 0 #ddd;
+		outline: none;
+}
+
+.google-social-button:focus {
+		outline: none;
+}
+
+.gcancel {
+		background: #db4b39;
+		color: #fff;
+		border: 1px solid transparent;
+		box-shadow: 0 1px 0 hsla(0, 0%, 0%, .05);
+}
+
+.gcancel:hover {
+		background: #db4b39;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #bd3d2a;
+		box-shadow: inset 0 -1px 0 #bd3d2a;
+}
+
+.gcancel:active {
+		color: #fff;
+		background: #db4b39;
+		border-top: 1px solid #9a3323;
+		border-bottom: 1px solid #db4b39;
+		box-shadow: inset 0 1px 0 #9a3323;
+		/*outline: 4px solid #c7dcfc; */
+}
+
+.gconfirm {
+		background: #53a93f;
+		color: #fff;
+		border: 1px solid transparent;
+}
+
+.gconfirm:hover {
+		background: #65b045;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #4C8534;
+		box-shadow: inset 0 -1px 0 #4c8534;
+}
+
+.gconfirm:active {
+		color: #fff;
+		background: #3e802f;
+		border-top: 1px solid #2f6124;
+		box-shadow: inset 0 1px 0 #2f6124;
+		/*outline: 4px solid #c7dcfc; */
+}
+
+.gprimary {
+		background: #427FED;
+		color: #fff;
+		border: 1px solid transparent;
+}
+
+.gprimary:hover {
+		background: #4285F4;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #21448D;
+		box-shadow: inset 0 -1px 0 #21448D;
+}
+
+.gprimary:active {
+		color: #fff;
+		background: #427FED;
+		color: #fff;
+		border: 1px solid transparent;
+		box-shadow: none;
+		/*outline: 4px solid #c7dcfc; */
+}
+/* GOOGLE MATERIAL BUTTONS */
+
+.gbutton,
+.gbutton:hover,
+.gbutton:active,
+.gbutton:focus {
+		outline: none;
+}

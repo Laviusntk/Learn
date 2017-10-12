@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Learn</title>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+			<!-- <link  rel="stylesheet" type="text/css" href="./css/normalize.css"> -->
+			<link  rel="stylesheet" type="text/css" href="./css/style.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<style>
+			table {
+			    border-collapse: collapse;
+			    width: 750px;
+					overflow: hidden;
+					border: 1px solid #dddddd;
+			}
+
+			td, th {
+			    border: 1px solid #dddddd;
+			    text-align: left;
+			    padding: 8px;
+			}
+			td:nth-child(2){
+				max-width: 300px;
+				word-wrap: break-word;
+			}
+			td:nth-child(3){
+				max-width: 100px;
+				word-wrap: break-word;
+			}
+			/*td:nth-child(3){
+				width: 300px;
+			}*/
+			tr{
+				border-bottom: 1px solid #dddddd;
+			}
+			tr:nth-child(even) {
+			    /*background-color: #dddddd;*/
+			}
+			tr:last-child{
+				border-bottom: 1px solid #dddddd;
+			}
+			tr:first-child{
+				border-top: none;
+				width: 30px;
+			}
+			tbody{
+				height: 100%;
+				overflow: hidden;
+				border-top: 1px solid #dddddd;
+			}
+			/*thead{
+				width: 100%;
+			}*/
+			tfoot{
+				position: fixed;
+				left: 50px;
+				top: 500px;
+				width: 600px;
+			}
+			#notification{
+				position: fixed;
+				left: 10px;
+				top: 560px;
+				width: 600px;
+			}
+			.site-folder{
+				cursor: pointer;
+			}
+			.file i{
+				float: right;
+			}
+			#repoTable td:last-child{
+				border-right: none;
+				text-align: center;
+			}
+			.repo-folder i{
+				float: right;
+			}
+			</style>
+
+	</head>
+	<body>
+		<ul id="notification"></ul>
+		<div id="MainView" >
+			<div id="HeaderView"></div>
+			<div id="FolderView"></div>
+			<center>
+				<div id="loginView">
+					<form>
+						<label><h1 id="login_err_msg">SIGN IN</h1></label>
+						<input type="text"  class="username" placeholder="Campus ID">
+						<input type="password" class="password" placeholder="Password">
+						<a class="button login" id="loginButton">Sign In</a>
+					</form>
+				</div>
+				<div class="loader"><img src="./img/loader1.gif"  width="50px" height="50px" /><br>Loading...</div>
+			</center>
+		</div>
+
+		<section class="tabs" id="ResourceView" >
+			            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+				        <label for="tab-1" class="tab-label-1">Vula</label>
+
+			            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+				        <label for="tab-2" class="tab-label-2">Past Material</label>
+
+					    <div class="clear-shadow"></div>
+
+				        <div class="content" class="col-sm-8" style="background-color:lavender;">
+					        <div class="content-1" >
+										<li class="pathHolder"  >
+											<a class="path sites" name="sites">Sites</a>
+											<a class="path sites" name="sites"> / </a>
+											<a  class="path course" name="course" > Courses</a>
+											<a class="path course" name="course"> / </a>
+										</li><br>
+										<ul id="fileView">
+										<table  id="vulaTable">
+											<tbody id="VulaResourceTable"></tbody>
+											<tfoot id="vula-button-controlls">
+												<tr>
+													<td colspan="3"><center><button class="upload-selected button blue">upload selected</button></center></td>
+													<td colspan="3" style="width: auto;"><center><button class="select-all button blue" >select all</button></center></td>
+												<tr>
+											</tfoot>
+										  </table>
+										</ul>
+						    </div>
+					        <div class="content-2">
+										<li class="pathHolder2">
+											<a class="path2 courseClass" name="course">Course</a>
+											<a class="path2 courseClass" name="course"> / </a>
+											<a  class="path2 yearClass" name="year" > Year</a>
+											<a class="path2 yearClass" name="year"> / </a>
+										</li><br>
+										<ul id="fileView">
+										<table  id="repoTable">
+											<tbody id="RepoResourceTable"></tbody>
+											<tfoot id="repo-button-controlls" style="visibility:hidden;" >
+											</tfoot>
+										  </table>
+										</ul>
+						    </div>
+				        </div>
+					</section>
+		        </div>
+
+		<script src="./js/Client.js"></script>
+	</body>
